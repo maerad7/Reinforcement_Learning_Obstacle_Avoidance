@@ -94,5 +94,3 @@ To get more information about the model, parameters and the results, please refe
 ## Acknowledgments
 
 I would like to express my gratitude to the author of the [turtlebot3_drlnav](https://github.com/tomasvr/turtlebot3_drlnav) repository. This project relies on the code and resources provided in that repository, and I appreciate the work that went into developing it. Credit for the base code goes to the original author. Thank you for your contributions!
-
-   ㅐ
