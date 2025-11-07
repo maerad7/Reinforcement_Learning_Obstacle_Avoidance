@@ -1,0 +1,47 @@
+device = cuda
+simulation_speed = 1
+state_size = 64
+action_size = 12
+hidden_size = 1024
+input_size = 64
+batch_size = 128
+buffer_size = 1000000
+discount_factor = 0.99
+learning_rate = 0.003
+tau = 0.003
+step_time = 0.01
+loss_function = <function smooth_l1_loss at 0x7c047db3fd90>
+epsilon = 1.0
+epsilon_decay = 0.9995
+epsilon_minimum = 0.075
+backward_enabled = True
+stacking_enabled = False
+stack_depth = 3
+frame_skip = 4
+networks = [Actor(
+  (fa1): Linear(in_features=64, out_features=1024, bias=True)
+  (fa2): Linear(in_features=1024, out_features=1024, bias=True)
+  (fa3): Linear(in_features=1024, out_features=12, bias=True)
+), Actor(
+  (fa1): Linear(in_features=64, out_features=1024, bias=True)
+  (fa2): Linear(in_features=1024, out_features=1024, bias=True)
+  (fa3): Linear(in_features=1024, out_features=12, bias=True)
+)]
+iteration = 0
+possible_actions = [[0.0, -0.5], [0.6, -1.0], [0.6, -0.5], [0.3, -1.0], [0.3, -0.5], [1.0, 0.0], [0.5, 0.0], [0.3, 0.5], [0.3, 1.0], [0.6, 0.5], [0.6, 1.0], [0.0, 0.5]]
+target_update_frequency = 500
+actor_optimizer = AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    decoupled_weight_decay: True
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.003
+    maximize: False
+    weight_decay: 0.01
+)
+
